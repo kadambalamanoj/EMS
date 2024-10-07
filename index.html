@@ -1,0 +1,105 @@
+<html></html>
+ <head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+    font-family: 'Roboto', sans-serif;
+   }
+
+   @keyframes fadeInUp {
+    0% {
+     opacity: 0;
+     transform: translateY(20px);
+    }
+    100% {
+     opacity: 1;
+     transform: translateY(0);
+    }
+   }
+
+   @keyframes slideInRight {
+    0% {
+     opacity: 0;
+     transform: translateX(100px);
+    }
+    100% {
+     opacity: 1;
+     transform: translateX(0);
+    }
+   }
+
+   .fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+   }
+
+   .slideInRight {
+    animation: slideInRight 1.2s ease-out forwards;
+   }
+
+   .spin-slow {
+    animation: spin 5s linear infinite;
+   }
+
+   .pulse-button {
+    animation: pulse 2s infinite;
+   }
+
+   @keyframes pulse {
+    0% {
+     transform: scale(1);
+     opacity: 1;
+    }
+    50% {
+     transform: scale(1.1);
+     opacity: 0.9;
+    }
+    100% {
+     transform: scale(1);
+     opacity: 1;
+    }
+   }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <header class="bg-gradient-to-r from-purple-900 to-black p-4 flex items-center justify-between fadeInUp">
+   <div class="flex items-center">
+    <img alt="Logo" class="mr-2 spin-slow" height="50" src="Election.png" width="50"/>
+    <span class="text-sm">
+     Election monitoring system to inspire upcoming voters
+    </span>
+   </div>
+   <nav class="space-x-4">
+    <a class="text-white hover:underline" href="#">
+     Home
+    </a>
+    <a class="text-white hover:underline" href="about.html">
+     About Us
+    </a>
+    <a class="text-white hover:underline" href="register.html">
+     Register
+    </a>
+    <a class="text-white hover:underline" href="login.html">
+     Login
+    </a>
+   </nav>
+  </header>
+  <main class="flex">
+   <div class="w-1/2 p-8 fadeInUp mt-20"> <!-- Added 'mt-20' for spacing -->
+    <h1 class="text-5xl font-bold">
+     The future depends on what you do today
+    </h1>
+    <p class="mt-4 text-lg">
+     Join us in ensuring fair and transparent elections. Together, we can create a more democratic and just world.
+    </p>
+    <a href="#" class="inline-block mt-8 bg-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-purple-700 transition-colors duration-300 pulse-button">
+     Get Involved
+    </a>
+   </div>
+   <div class="w-1/2 slideInRight">
+    <img alt="Satellite view of India at night showing city lights" class="w-full h-full object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/09x3nzkQVkbZKRz6fydNw8atkJRMjJ737ebdhwwNMfr5PuFnA.jpg" width="600"/>
+   </div>
+  </main>
+ </body>
+</html>

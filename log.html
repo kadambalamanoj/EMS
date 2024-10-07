@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(135deg, #2c003e, #3b0057);
+            font-family: 'Roboto', sans-serif;
+        }
+        .form-container {
+            background-color: black;
+            padding: 20px;
+            border-radius: 20px;
+            width: 400px;
+            margin: auto;
+        }
+        .form-container input, .form-container button {
+            border-radius: 50px;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+        }
+        .form-container button {
+            background-color: #d90429;
+            color: white;
+            font-weight: bold;
+        }
+        .form-container button:hover {
+            background-color: #b8001e;
+        }
+    </style>
+    <script>
+        // This script gets the 'role' parameter from the URL and displays it on the page
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const role = urlParams.get('role');
+            
+            if (role) {
+                document.getElementById('login-type').innerText = `Login as ${role.charAt(0).toUpperCase() + role.slice(1)}`;
+            }
+        }
+    </script>
+</head>
+<body class="text-white">
+    <main class="flex flex-col items-center mt-10">
+        <h1 class="text-5xl font-bold mb-5" id="login-type">Login</h1>
+        <div class="form-container">
+            <h2 class="text-3xl font-bold mb-5 text-center">Login to your account</h2>
+            <form class="font">
+                <input placeholder="Phone No" required type="tel" />
+                <input placeholder="Email" required type="email" />
+                <input placeholder="Password" required type="password" />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+    <a class="text-white hover:underline" href="admin_home.html"></a>
+</body>
+</html>

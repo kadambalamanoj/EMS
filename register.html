@@ -1,0 +1,105 @@
+<html></html>
+ <head>
+  <title>
+   Register
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            background: linear-gradient(135deg, #2c003e, #3b0057);
+            font-family: 'Roboto', sans-serif;
+        }
+        .nav-link {
+            color: white;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+            background-color: black;
+            padding: 20px;
+            border-radius: 20px;
+            width: 400px;
+            margin: auto;
+        }
+        .form-container input {
+            border-radius: 50px;
+            margin-bottom: 15px;
+            padding: 10px;
+            width: 100%;
+        }
+        .form-container button {
+            background-color: #d90429;
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+            width: 100%;
+            font-weight: bold;
+        }
+        .form-container button:hover {
+            background-color: #b8001e;
+        }
+        .form-container a {
+            color: white;
+            text-decoration: underline;
+        }
+        .font{
+            color: #000;
+        }
+  </style>
+ </head>
+ <body class="text-white">
+  <header class="flex items-center justify-between p-4">
+   <div class="flex items-center">
+    <img alt="Logo" class="mr-2" height="50" src="Election.png" width="50"/>
+    <span class="text-lg font-bold">
+     Election monitoring system to inspire upcoming voters
+    </span>
+   </div>
+   <nav>
+    <a class="nav-link" href="index.html">
+     Home
+    </a>
+    <a class="nav-link" href="about.html">
+     About Us
+    </a>
+    <a class="nav-link" href="register.html">
+     Register
+    </a>
+    <a class="nav-link" href="login.html">
+     Login
+    </a>
+   </nav>
+  </header>
+  <hr class="border-pink-500"/>
+  <main class="flex flex-col items-center mt-10">
+   <h1 class="text-5xl font-bold mb-5">
+    Register
+   </h1>
+   <div class="form-container">
+    <h2 class="text-3xl font-bold mb-5 text-center">
+     Create New Account
+    </h2>
+    <form class="font">
+     <input placeholder="Name" required="" type="text"/>
+     <input placeholder="Email" required="" type="email"/>
+     <input placeholder="Phone No" required="" type="tel"/>
+     <input placeholder="Password" required="" type="password"/>
+     <button type="submit">
+      Sign Up
+     </button>
+    </form>
+    <p class="text-center mt-4">
+     <a href="login.html">
+      Already Registered? Login
+     </a>
+    </p>
+   </div>
+  </main>
+ </body>
+</html>

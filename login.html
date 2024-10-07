@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Select Login Type</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+    background: linear-gradient(135deg, #2c003e, #3b0057);
+    font-family: 'Roboto', sans-serif;
+   }
+   .nav-link {
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+   }
+   .nav-link:hover {
+    text-decoration: underline;
+   }
+   .form-container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    margin: auto;
+   }
+   .form-container select, .form-container input {
+    border-radius: 50px;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+   }
+   .form-container button {
+    background-color: #d90429;
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+    font-weight: bold;
+   }
+   .form-container button:hover {
+    background-color: #b8001e;
+   }
+   .font {
+    color: #000;
+   }
+  </style>
+  <script>
+    function navigateToLogin(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get the selected role from the dropdown
+        var role = document.querySelector('select').value;
+
+        // Check if a role is selected
+        if (role) {
+            // Redirect to different home pages based on the selected role
+            if (role === 'admin') {
+                window.location.href = 'admin_home.html'; // Redirect to admin home
+            } else if (role === 'citizen') {
+                window.location.href = 'citizen_home.html'; // Redirect to citizen home
+            } else if (role === 'data-analyst') {
+                window.location.href = 'data_analyst_home.html'; // Redirect to data analyst home
+            } else if (role === 'observer') {
+                window.location.href = 'observer_home.html'; // Redirect to election observer home
+            }
+        } else {
+            alert("Please select a login type.");
+        }
+    }
+  </script>
+ </head>
+ <body class="text-white">
+  <header class="flex items-center justify-between p-4">
+   <div class="flex items-center">
+    <img alt="Logo" class="mr-2" height="50" src="Election.png" width="50"/>
+    <span class="text-lg font-bold">Election monitoring system to inspire upcoming voters</span>
+   </div>
+   <nav>
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="about.html">About Us</a>
+    <a class="nav-link" href="register.html">Register</a>
+    <a class="nav-link" href="login.html">Login</a>
+   </nav>
+  </header>
+  <hr class="border-pink-500"/>
+  <main class="flex flex-col items-center mt-10">
+   <h1 class="text-5xl font-bold mb-5">Select Login Type</h1>
+   <div class="form-container">
+    <h2 class="text-3xl font-bold mb-5 text-center">Choose Your Role</h2>
+    <form class="font" onsubmit="navigateToLogin(event)">
+     <select required>
+      <option value="" disabled selected>Select Login Type</option>
+      <option value="admin">Admin</option>
+      <option value="citizen">Citizen</option>
+      <option value="data-analyst">Data Analyst</option>
+      <option value="observer">Election Observer</option>
+     </select>
+     <button type="submit">Proceed</button>
+    </form>
+    <a class="text-white hover:underline" href="admin_home.html"></a>
+   </div>
+  </main>
+ </body>
+</html>
